@@ -1,0 +1,476 @@
+<html>
+<head>
+<title>TestNG:  RunParallel</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RunParallel</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Aug 10 22:44:51 EDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>16 seconds (16555 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Password should contain at least 8 characters] but found [password_mismatch:The two password fields didn’t match.]
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Password should contain at least 8 characters&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace388822878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace388822878'><pre>java.lang.AssertionError: expected [Password should contain at least 8 characters] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Password should contain at least 8 characters&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;password2&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=password2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickafterGivingInvalidCredentials(RegisterPage_PageObject.java:61)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_enters_and(RegisterPage_StepDefinitions.java:70)
+	at ✽.The user enters &quot;Numpy@SDET84_1&quot;, &quot;Numpy@123&quot;, and &quot;Numpy@123&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:39)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1555045447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1555045447'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;password2&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=password2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickafterGivingInvalidCredentials(RegisterPage_PageObject.java:61)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_enters_and(RegisterPage_StepDefinitions.java:70)
+	at ✽.The user enters &quot;Numpy@SDET84_1&quot;, &quot;Numpy@123&quot;, and &quot;Numpy@123&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:39)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Password cannot be too similar to your other personal information] but found [password_mismatch:The two password fields didn’t match.]
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Password cannot be too similar to your other personal information&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1835574113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1835574113'><pre>java.lang.AssertionError: expected [Password cannot be too similar to your other personal information] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Password cannot be too similar to your other personal information&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Password cannot be commonly used password] but found [password_mismatch:The two password fields didn’t match.]
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Password cannot be commonly used password&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace306393050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace306393050'><pre>java.lang.AssertionError: expected [Password cannot be commonly used password] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Password cannot be commonly used password&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for empty fields below Password textbox", "Optional[Feature file to test register]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickWithoutGivingPasswords(RegisterPage_PageObject.java:48)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_clicks_button_after_giving_username_with_other_fields_empty(RegisterPage_StepDefinitions.java:46)
+	at ✽.The user clicks &quot;Register&quot; button after giving username with other fields empty(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:29)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1126963879", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1126963879'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickWithoutGivingPasswords(RegisterPage_PageObject.java:48)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_clicks_button_after_giving_username_with_other_fields_empty(RegisterPage_StepDefinitions.java:46)
+	at ✽.The user clicks &quot;Register&quot; button after giving username with other fields empty(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:29)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for empty fields below username textbox", "Optional[Feature file to test register]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Register&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=xpath, value=//input[@value=&apos;Register&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.click(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickWithoutGivingUserNameAndPassword(RegisterPage_PageObject.java:42)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_clicks_button_with_all_fields_empty(RegisterPage_StepDefinitions.java:32)
+	at ✽.The user clicks &quot;Register&quot; button with all fields empty(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:24)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace628656436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace628656436'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Register&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=xpath, value=//input[@value=&apos;Register&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.click(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickWithoutGivingUserNameAndPassword(RegisterPage_PageObject.java:42)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_clicks_button_with_all_fields_empty(RegisterPage_StepDefinitions.java:32)
+	at ✽.The user clicks &quot;Register&quot; button with all fields empty(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:24)
+</pre></div></td>
+<td>4</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Please enter valid username] but found [password_mismatch:The two password fields didn’t match.]
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Please enter valid username&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1095264294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1095264294'><pre>java.lang.AssertionError: expected [Please enter valid username] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_should_see_the_error_message_indicating(RegisterPage_StepDefinitions.java:82)
+	at ✽.the user should see the error message indicating &quot;Please enter valid username&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:41)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickafterGivingInvalidCredentials(RegisterPage_PageObject.java:59)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_enters_and(RegisterPage_StepDefinitions.java:70)
+	at ✽.The user enters &quot;kalasdet118&quot;, &quot;12345678&quot;, and &quot;12345678&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:39)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace974794756", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace974794756'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickafterGivingInvalidCredentials(RegisterPage_PageObject.java:59)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_enters_and(RegisterPage_StepDefinitions.java:70)
+	at ✽.The user enters &quot;kalasdet118&quot;, &quot;12345678&quot;, and &quot;12345678&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:39)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with success message when the user giving correct username and password", "Optional[Feature file to test register]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickafterGivingInvalidCredentials(RegisterPage_PageObject.java:59)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_clicks_button_after_giving_correct_and(RegisterPage_StepDefinitions.java:87)
+	at ✽.The user clicks &quot;Register&quot; button after giving correct &quot;coolcucumberteam&quot;,&quot;Kind@123&quot; and &quot;Kind@123&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:56)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1027320820", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1027320820'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username&apos;]&quot;}
+  (Session info: chrome=115.0.5790.171)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f47c96e914cebf7c67b10d9e95b71afc, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58779}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58779/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f47c96e914cebf7c67b10d9e95b71afc
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy42.sendKeys(Unknown Source)
+	at com.dsalgoproject.pageobjects.RegisterPage_PageObject.clickafterGivingInvalidCredentials(RegisterPage_PageObject.java:59)
+	at com.dsalgoproject.stepdefinitions.RegisterPage_StepDefinitions.the_user_clicks_button_after_giving_correct_and(RegisterPage_StepDefinitions.java:87)
+	at ✽.The user clicks &quot;Register&quot; button after giving correct &quot;coolcucumberteam&quot;,&quot;Kind@123&quot; and &quot;Kind@123&quot;(file:///C:/Users/ashok/git/DS-ALGOPROJECT_MAIN/DS_ALGO_PROJECT/src/test/resources/feature/Suite2/Register.feature:56)
+</pre></div></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with an error message", "Optional[Feature file to test register]"</td>
+<td></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+<tr>
+<td title='com.dsalgoproject.testrunner.Runner2.runScenario()'><b>runScenario</b><br>Test class: com.dsalgoproject.testrunner.Runner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "The user is presented with error message for empty fields below Password1 textbox", "Optional[Feature file to test register]"</td>
+<td></td>
+<td>0</td>
+<td>com.dsalgoproject.testrunner.Runner2@4c37b5b</td></tr>
+</table><p>
+</body>
+</html>

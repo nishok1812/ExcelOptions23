@@ -1,0 +1,49 @@
+2023-09-20 09:39:40.035 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.044 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+2023-09-20 09:39:40.046 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.046 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.047 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.047 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.048 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.048 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.049 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.054 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 5 ms.
+2023-09-20 09:39:40.055 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.057 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+2023-09-20 09:39:40.057 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.058 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.058 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.058 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.060 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.060 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.060 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.061 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.061 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.062 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.062 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.062 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.065 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 3 ms.
+2023-09-20 09:39:40.065 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.066 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.066 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.067 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2023-09-20 09:39:40.067 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2023-09-20 09:39:40.073 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [TestNG] Running:
+  C:\Users\ashok\AppData\Local\Temp\testng-eclipse-1199476127\testng-customsuite.xml
+
+2023-09-20 09:39:40.090 INFO [main] [org.testng.log4testng.Logger.info(Logger.java:112)] - [Utils] DynamicGraphHelper.createDynamicGraph() took 3 ms.
+2023-09-20 09:39:41.398 INFO [main] [io.github.bonigarcia.wdm.WebDriverManager.exportDriver(WebDriverManager.java:1265)] - Exporting webdriver.chrome.driver as C:\Users\ashok\.cache\selenium\chromedriver\win64\115.0.5790.170\chromedriver.exe
+2023-09-20 09:39:42.864 INFO [main] [com.dsalgoproject.driverfactory.DriverManager.launchBrowser(DriverManager.java:28)] - Launching browser:chrome
+2023-09-20 09:39:43.008 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
+2023-09-20 09:39:43.269 INFO [main] [com.dsalgoproject.pageobjects.HomePage_PageObject.homePageLogin(HomePage_PageObject.java:67)] - DS ALGO Page Opened
+2023-09-20 09:39:43.927 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
+2023-09-20 09:39:45.312 INFO [main] [com.dsalgoproject.pageobjects.HomePage_PageObject.checkSelectBox(HomePage_PageObject.java:86)] - The error text is:You are not logged in
+2023-09-20 09:39:45.354 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
+2023-09-20 09:39:46.719 INFO [main] [com.dsalgoproject.pageobjects.HomePage_PageObject.checkSelectBox(HomePage_PageObject.java:86)] - The error text is:You are not logged in
+2023-09-20 09:39:46.755 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
+2023-09-20 09:39:48.100 INFO [main] [com.dsalgoproject.pageobjects.HomePage_PageObject.checkSelectBox(HomePage_PageObject.java:86)] - The error text is:You are not logged in
+2023-09-20 09:39:48.171 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
+2023-09-20 09:39:49.547 INFO [main] [com.dsalgoproject.pageobjects.HomePage_PageObject.checkSelectBox(HomePage_PageObject.java:86)] - The error text is:You are not logged in
+2023-09-20 09:39:49.621 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
+2023-09-20 09:39:51.283 INFO [main] [com.dsalgoproject.pageobjects.HomePage_PageObject.checkSelectBox(HomePage_PageObject.java:86)] - The error text is:You are not logged in
+2023-09-20 09:39:51.332 INFO [main] [com.dsalgoproject.apphooks.Hooks.beforeScenario(Hooks.java:32)] - Browser is launched
